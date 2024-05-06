@@ -30,22 +30,19 @@ print(new_Text)
 print(text.strip(','))
 
 #Fomin Vladyslav
-if string.startswith(("У місті")):
+if text.startswith(("У місті")):
     print("Строка начинается с 'У місті' '")
 else:
     print("Строка не начинается ни с 'У місті', ни с 'ПИПИПУ'")
 
-string = "Your mama so great!"
-
-index = string.find("mama")
+index = text.find("ритмом міста")
 if index != -1:
-    print(f"Підстрока 'mama' знайдена в позиції {index}")
+    print(f"Підстрока 'ритмом міста' знайдена в позиції {index}")
 else:
-    print("Підстрока 'mama' не знайдена")
+    print("Підстрока 'ритмом міста' не знайдена")
 
-string = "big, big chungus!"
 
-count = string.count("chungus")
-print(f"Кількість входів 'hello' в строці: {count}")
+count = text.count("історія")
+print(f"Кількість входів 'історія' в строці: {count}")
 
 #Використати функції capitalize(), isdigit(), splitlines()
