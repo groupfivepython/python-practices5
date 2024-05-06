@@ -29,4 +29,20 @@ print(new_Text)
 
 print(text.strip(','))
 
-#Використати функції startswith(), find(), count()
+#Fomin Vladyslav
+if text.startswith(("У місті")):
+    print("Строка начинается с 'У місті' '")
+else:
+    print("Строка не начинается ни с 'У місті', ни с 'ПИПИПУ'")
+
+index = text.find("ритмом міста")
+if index != -1:
+    print(f"Підстрока 'ритмом міста' знайдена в позиції {index}")
+else:
+    print("Підстрока 'ритмом міста' не знайдена")
+
+
+count = text.count("історія")
+print(f"Кількість входів 'історія' в строці: {count}")
+
+#Використати функції capitalize(), isdigit(), splitlines()
