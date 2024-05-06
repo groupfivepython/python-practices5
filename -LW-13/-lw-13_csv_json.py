@@ -37,3 +37,25 @@ except FileNotFoundError:
 
 except Exception as e:
     print("Сталася помилка:", e)
+
+#Batrachenko Serhii
+
+try:
+    with open(json_file, 'r') as jsonfile:
+        data = json.load(jsonfile)
+
+    with open(csv_file, 'a', newline='') as csvfile:  # Відкриваємо файл у режимі додавання
+        writer = csv.DictWriter(csvfile, fieldnames=['Name', 'Age', 'City'])
+
+        # Додавання нових рядків
+        new_data = [
+            {'Name': 'Max', 'Age': 22, 'City': 'Lviv'},
+            {'Name': 'Anna', 'Age': 21, 'City': 'Odessa'}
+        ]
+        for row in new_data:
+            writer.writerow(row)
+
+    print("Нові дані було успішно додано до файлу", csv_file)
+
+except Exception as e:
+    print("Сталася помилка під час додавання нових даних:", e)
