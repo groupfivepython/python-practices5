@@ -30,3 +30,20 @@ print(new_Text)
 print(text.strip(','))
 
 #Використати функції startswith(), find(), count()
+if string.startswith(("У місті")):
+    print("Строка начинается с 'У місті' '")
+else:
+    print("Строка не начинается ни с 'У місті', ни с 'ПИПИПУ'")
+
+string = "Your mama so great!"
+
+index = string.find("mama")
+if index != -1:
+    print(f"Підстрока 'mama' знайдена в позиції {index}")
+else:
+    print("Підстрока 'mama' не знайдена")
+
+string = "big, big chungus!"
+
+count = string.count("chungus")
+print(f"Кількість входів 'hello' в строці: {count}")
