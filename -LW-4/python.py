@@ -21,3 +21,5 @@ new_text = " ".join(words)
 print("Новий текст:", new_text)
 
 #Функції для використання наступному студенту: upper() / lower() replace() strip()
+word = text.upper()
+print("new text", word)
