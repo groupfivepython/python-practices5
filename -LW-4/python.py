@@ -29,7 +29,7 @@ print(new_Text)
 
 print(text.strip(','))
 
-#Використати функції startswith(), find(), count()
+#Fomin Vladyslav
 if string.startswith(("У місті")):
     print("Строка начинается с 'У місті' '")
 else:
@@ -47,3 +47,5 @@ string = "big, big chungus!"
 
 count = string.count("chungus")
 print(f"Кількість входів 'hello' в строці: {count}")
+
+#Використати функції capitalize(), isdigit(), splitlines()
