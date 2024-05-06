@@ -39,5 +39,29 @@ add_student_data(
 # Вивід словника
 print(students_dict)
 
-# Наступному студенту створити функцію пошуку студента за ПІБ
-# ПІБ Хто виконує
+#Batrachenko Serhii
+def find_student_by_full_name(full_name):
+    # Перебір груп та студентів у словнику
+    for group_number, students in students_dict.items():
+        # Перебір студентів у групі
+        for student in students:
+            # Перевірка чи співпадає введений ПІБ з ПІБ студента
+            if student['full_name'] == full_name:
+                return {
+                    'group_number': group_number,
+                    'full_name': student['full_name'],
+                    'course': student['course'],
+                    'subjects_grades': student['subjects_grades']
+                }
+    # Якщо студента не знайдено, повертаємо None
+    return None
+
+# Приклад використання функції пошуку студента за ПІБ
+student_info = find_student_by_full_name('Іванов Іван Іванович')
+if student_info:
+    print("Знайдено студента:")
+    print(student_info)
+else:
+    print("Студента не знайдено.")
+
+#Створити функцію видалення даних про студента
