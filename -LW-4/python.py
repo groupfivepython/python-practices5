@@ -20,6 +20,13 @@ print("Слова у тексті:", words)
 new_text = " ".join(words)
 print("Новий текст:", new_text)
 
-#Функції для використання наступному студенту: upper() / lower() replace() strip()
+#Batrachenko Serhii
 word = text.upper()
 print("new text", word)
+
+new_Text = text.replace("нова історія", "new history")
+print(new_Text)
+
+print(text.strip(','))
+
+#Використати функції startswith(), find(), count()
