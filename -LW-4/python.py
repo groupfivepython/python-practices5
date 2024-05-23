@@ -45,5 +45,13 @@ else:
 count = text.count("історія")
 print(f"Кількість входів 'історія' в строці: {count}")
 
-#Використати функції capitalize(), isdigit(), splitlines()
-#Test
+#Leonid Raiev
+
+capitalized_text = text.capitalize()
+print("Текст з великої літери:", capitalized_text)
+
+is_digit = text.isdigit()
+print("Текст складається тільки з цифр:", is_digit)
+
+split_lines = text.splitlines()
+print("Текст, розбитий на рядки:", split_lines)
