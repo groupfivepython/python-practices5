@@ -34,3 +34,14 @@ try:
 except Exception as e:
     print("Сталася помилка під час запису даних у файл:", e)
 
+#Leonid Raiev
+surname4 = "Раєв"
+answer3 = "Основні типи даних у Python включають числові (int, float, complex), логічні (bool), послідовності (str, list, tuple, range), множини (set, frozenset) та словники (dict), відрізняючись змінністю, впорядкованістю, унікальністю елементів та способом доступу до них."
+
+try:
+    with open(file_name, 'a', encoding='utf-8') as file:  # Відкриваємо файл у режимі додавання
+        file.write("Прізвище: {}\n".format(surname4))
+        file.write("Відповідь: {}\n".format(answer3))
+    print("Дані було успішно додано до файлу.")
+except Exception as e:
+    print("Сталася помилка під час запису даних у файл:", e)
