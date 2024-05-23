@@ -84,7 +84,29 @@ def delete_student(full_name):
 # Приклад використання функції видалення даних про студента
 delete_student('Іванов Іван Іванович')
 
+#Leonid Raiev
+# Функція для пошуку студентів за оцінками
+def find_students_by_grade(subject, min_grade):
+    found_students = []
+    # Перебір груп та студентів у словнику
+    for group_number, students in students_dict.items():
+        # Перебір студентів у групі
+        for student in students:
+            # Перевірка чи є у студента потрібний предмет та чи оцінка не менше мінімальної
+            if subject in student['subjects_grades'] and student['subjects_grades'][subject] >= min_grade:
+                found_students.append({
+                    'group_number': group_number,
+                    'full_name': student['full_name'],
+                    'course': student['course'],
+                    'subjects_grades': student['subjects_grades']
+                })
+    return found_students
 
+# Приклад використання функції пошуку студентів за оцінками
+students_with_high_math_grades = find_students_by_grade('Math', 80)
+print("Студенти з оцінкою з математики не менше 80:")
+for student in students_with_high_math_grades:
+    print(student)
 
 
 
