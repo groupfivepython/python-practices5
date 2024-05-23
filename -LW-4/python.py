@@ -46,3 +46,4 @@ count = text.count("історія")
 print(f"Кількість входів 'історія' в строці: {count}")
 
 #Використати функції capitalize(), isdigit(), splitlines()
+#Test
