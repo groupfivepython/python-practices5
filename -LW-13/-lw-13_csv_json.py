@@ -59,3 +59,27 @@ try:
 
 except Exception as e:
     print("Сталася помилка під час додавання нових даних:", e)
+
+#Leonid Raiev
+
+try:
+    # Зчитування оновлених даних з початкового .csv файлу
+    with open(csv_file, 'r', newline='') as csvfile:
+        reader = csv.DictReader(csvfile)
+        updated_data = [row for row in reader]
+
+    # Додавання нових рядків до оновлених даних
+    new_data = [
+        {'Name': 'Ser', 'Age': 40, 'City': 'London'},
+        {'Name': 'Max', 'Age': 30, 'City': 'Paris'}
+    ]
+    updated_data.extend(new_data)
+
+    # Оновлення .json файлу з новими даними
+    with open(json_file, 'w') as jsonfile:
+        json.dump(updated_data, jsonfile, indent=4)
+
+    print("Оновлені дані було успішно переписано у файл", json_file)
+
+except Exception as e:
+    print("Сталася помилка під час оновлення даних у файлі .json:", e)
